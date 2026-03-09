@@ -1,5 +1,14 @@
 import { chromium, expect } from '@playwright/test';
 
+async function login(page,username = 'standard_user', password = 'secret_sauce') {
+    await page.fill('input[data-test="username"]', username);
+    await page.fill('input[data-test="password"]', password);
+    await page.click('[data-test="login-button"]');
+    await page.waitForLoadState('networkidle');
+    await expect(page.url()).toContain('inventory.html');
+    console.log(`Login Exitoso en ${username}`);
+}
+
 (async ()=>{
     const browser = await chromium.launch({headless: false, slowMo: 500});
     const context = await browser.newContext();
