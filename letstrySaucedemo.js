@@ -69,6 +69,7 @@ const {chromium, expect}= require('@playwright/test');
         const title = page.locator('h2');
         const titleText = await title.innerText();
         await expect(titleText).toContain('your order!');
+        await page.screenshot({path:`Complete-page.png`})
         console.log(`Actual Title:${titleText}`);
         const backHome =  page.locator('[data-test="back-to-products"]');
         await backHome.click();
