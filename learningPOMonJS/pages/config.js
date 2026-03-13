@@ -50,8 +50,9 @@ export const LOCATORS = {
     addBtnPrefix: '[data-test^="add-to-cart-"]',
 
     //CART
-    continueBtn:'[data-test="continue-shopping"]',
+    continueShoppingBtn:'[data-test="continue-shopping"]',
     checkoutBtn: '[data-test="checkout"]',
+    allItemsLink: '[data-test=inventory-sidebar-link]',
 
     //CHECKOUT
 
