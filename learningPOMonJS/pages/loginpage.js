@@ -40,6 +40,10 @@ class LoginPage extends BasePage {
     async isInventoryTitleVisible(){
         return await this.isVisible(this.inventoryTitle)
     }
+    async logout(){
+        await this.clickElement(this.burgerMenuBtn);
+        await this.clickElement(this.logoutLink);
+    }
 }
 
 export { LoginPage };
