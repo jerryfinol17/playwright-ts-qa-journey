@@ -1,14 +1,24 @@
 {
-  "name": "aprendiendoJS",
+  "name": "playwright-typescript-saucedemo-pom-framework",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "playwright.config.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test"
   },
   "private": true,
-  "dependencies": {
+  "devDependencies": {
     "@playwright/test": "^1.58.2",
-    "playwright": "^1.58.2"
+    "@types/node": "^25.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
+    "monocart-reporter": "^2.10.0",
+    "playwright": "^1.58.2",
+    "typescript": "^5.9.3",
+    "v8-to-istanbul": "^9.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
   }
 }
